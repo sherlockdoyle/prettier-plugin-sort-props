@@ -1,0 +1,48 @@
+{
+  "name": "prettier-plugin-sort-props",
+  "version": "1.0.0",
+  "description": "A opinionated plugin to sort JSX props.",
+  "main": "./dist/index.js",
+  "bin": {
+    "prettier-plugin-sort-props": "dist/cli.js"
+  },
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "tsup src/index.ts src/cli.ts --format esm --minify",
+    "postbuild": "copyfiles -f src/model.onnx dist/"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "copyfiles": "^2.4.1",
+    "rimraf": "^6.0.1",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "onnxruntime-node": "^1.21.0",
+    "prettier": "^3.5.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sherlockdoyle/prettier-plugin-sort-props.git"
+  },
+  "author": {
+    "name": "Sherlock Doyle"
+  },
+  "license": "MIT",
+  "keywords": [
+    "prettier",
+    "prettier-plugin",
+    "sort-props",
+    "react",
+    "jsx",
+    "tsx",
+    "sort",
+    "props",
+    "order"
+  ]
+}
