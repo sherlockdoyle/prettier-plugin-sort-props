@@ -55,7 +55,7 @@ async function walkAST(ast: AST, sorter: PreferenceSorter) {
 
 export default {
   options: {
-    propSortUseAI: {
+    sortPropsUseAI: {
       category: 'prop-sort',
       type: 'choice',
       choices: [
@@ -66,7 +66,7 @@ export default {
       default: 'stable',
       description: "Use AI to sort props which don't match the predefined order",
     } as prettier.ChoiceSupportOption<UseAIOption>,
-    propSortCustomOrder: {
+    sortPropsCustomOrder: {
       category: 'prop-sort',
       type: 'string',
       array: true,
@@ -79,8 +79,8 @@ export default {
       ...typescript.typescript,
       parse: async (text, options) => {
         const sorter = await PreferenceSorter.create(
-          options.propSortUseAI as UseAIOption,
-          options.propSortCustomOrder as string[],
+          options.sortPropsUseAI as UseAIOption,
+          options.sortPropsCustomOrder as string[],
         );
 
         const parsed: AST = typescript.typescript.parse(text, options);

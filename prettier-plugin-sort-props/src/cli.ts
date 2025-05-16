@@ -108,4 +108,4 @@ for (const props of propLists) {
 }
 
 console.log('Rearrange the following props, if necessary, and add them to your prettier config:');
-console.log('"propSortCustomOrder":', JSON.stringify(await weights.sortKeys(), null, 2));
+console.log('"sortPropsCustomOrder":', JSON.stringify(await weights.sortKeys(), null, 2));
