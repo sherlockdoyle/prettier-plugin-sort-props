@@ -40,7 +40,9 @@ const {
   positionals,
   values: { exclude },
 } = util.parseArgs({
-  options: { exclude: { type: 'string', short: 'e', multiple: true, default: ['*.test.*'] } },
+  options: {
+    exclude: { type: 'string', short: 'e', multiple: true, default: ['node_modules', '*.test.*', '*.spec.*'] },
+  },
   allowPositionals: true,
 });
 if (positionals[0] !== 'extract-order') {
