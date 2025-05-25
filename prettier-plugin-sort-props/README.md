@@ -29,7 +29,7 @@ Add the plugin to your Prettier configuration file.
 
 ### Working
 
-Are you aware of [prettier-plugin-css-order](https://github.com/Siilwyn/prettier-plugin-css-order)? This plugin works just like that plugin, but for JSX props. The problem with JSX props is that they can have arbitrary names, so you can't just use a predefined order like [Concentric-CSS](https://github.com/brandon-rhodes/Concentric-CSS). Instead, we use a simple and small (310KB only) AI model to sort the props, which runs offline, completely on your device; and you can disable it too! Other than the AI model, there's also a small list of common props arranged in a predetermined order - which you can find in [order.ts](prettier-plugin-sort-props/src/order.ts).
+Are you aware of [prettier-plugin-css-order](https://github.com/Siilwyn/prettier-plugin-css-order)? This plugin works just like that plugin, but for JSX props. The problem with JSX props is that they can have arbitrary names, so you can't just use a predefined order like [Concentric-CSS](https://github.com/brandon-rhodes/Concentric-CSS). Instead, we use a simple and small (310KB only) AI model to sort the props, which runs offline, completely on your device; and you can disable it too! Other than the AI model, there's also a small list of common props arranged in a predetermined order - which you can find in [order.ts](src/order.ts).
 
 The props sorting follows 3 steps:
 
