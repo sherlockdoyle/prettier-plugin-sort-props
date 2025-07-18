@@ -13,12 +13,17 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "tsup src/index.ts src/cli.ts --format esm --minify",
-    "postbuild": "copyfiles -f src/model.onnx dist/"
+    "postbuild": "copyfiles -f src/model.onnx dist/",
+    "test": "jest"
   },
   "devDependencies": {
+    "@types/jest": "^30.0.0",
     "@types/node": "^22.14.0",
     "copyfiles": "^2.4.1",
+    "jest": "^30.0.4",
+    "jest-environment-node": "^30.0.4",
     "rimraf": "^6.0.1",
+    "ts-jest": "^29.4.0",
     "tsup": "^8.4.0",
     "typescript": "^5.8.3"
   },

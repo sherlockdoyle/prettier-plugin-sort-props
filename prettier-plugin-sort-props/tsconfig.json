@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "module": "ESNext",
-    "rootDir": "./src",
-    "moduleResolution": "node",
+    "module": "NodeNext",
+    "rootDir": "./",
+    "moduleResolution": "nodenext",
     "declaration": true,
     "outDir": "./dist",
     "esModuleInterop": true,
@@ -11,5 +11,5 @@
     "strict": true,
     "skipLibCheck": true
   },
-  "include": ["src/**/*.ts"]
+  "include": ["src/**/*.ts", "tests/**/*.ts"]
 }
